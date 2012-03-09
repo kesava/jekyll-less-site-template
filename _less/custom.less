@@ -1,26 +1,34 @@
 /* Copied from bootstrap examples and modified */
 /* Override some defaults */
 html, body {
-  background-color: #eee;
+  background-color: #fff;
+  //#gradient > .vertical-three-colors(@navbarBackgroundGradientTop, @navbarBackgroundGradientBottom, 20%, @navbarBackgroundGradientBottom);
 }
 body {
-  padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+  padding-top: 50px; /* 40px to make the container go all the way to the bottom of the topbar */
 }
-.container > footer p {
-  text-align: center; /* center align it with the container */
+footer p {
+  height: 40px;
+  border-top: 1px solid #eee;
+  border-top: 3px;
+  text-align: center; /* center align it with the container */  
+  //#gradient > .vertical(@white, @black);
+
 }
 
 /* The white background content wrapper */
 .container > .content {
-  background-color: #fff;
+  //background-color: #fff;
   padding: 20px;
   margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  /*
   -webkit-border-radius: 0 0 6px 6px;
      -moz-border-radius: 0 0 6px 6px;
           border-radius: 0 0 6px 6px;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
      -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
           box-shadow: 0 1px 2px rgba(0,0,0,.15);
+		  */
 }
 
 /* Page header tweaks */
@@ -33,10 +41,74 @@ body {
 /* Give a quick and non-cross-browser friendly divider */
 .content .span4 {
   margin-left: 0;
-  padding-left: 19px;
-  border-left: 1px solid #eee;
+  padding-left: 15px;
+  padding-right: 4px;
+  border-right: 1px solid #eee;
 }
 
 .topbar .btn {
   border: 0;
 }
+
+/* Carousel Settings */
+.carousel > .carousel-inner > .item {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	
+	.whatif-text {
+		h2 {
+			font-size: 35px;
+			padding-bottom: 35px;
+			color: @grayDark;
+		}
+		
+		font-size: 18px;
+		float: left;
+		line-height: 140%;
+		
+		.quote {
+			display: block;
+			padding-top: 15px;
+			font-style: italic;
+			font-size: 95%;
+		}
+	}
+	
+	.whatif-image {
+	}
+}
+
+@featureSize:		60px;
+@paddingFeature:	((@gridColumnWidth * 2) - @featureSize) / 2;
+
+
+.row {
+	.pitch {
+		font-size: 200%;
+		line-height: 140%;		
+		padding: 0px 20px 20px 20px;
+		text-align: center;
+	}
+	h6 {
+		color: @grayLight;
+		font-size: 17px;
+	}
+}
+
+.span2 {						
+	img {
+		width: @featureSize;
+		padding-left: @paddingFeature;
+		padding-right: @paddingFeature;
+				
+	}
+	.name {
+		font-size: 101%;
+		padding-top: 10px;
+		padding-bottom: 30px;
+		font-weight: bold;
+		text-align: center;
+	}
+}
+

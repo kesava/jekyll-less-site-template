@@ -14,7 +14,8 @@
 .navbar-inner {
   padding-left:  20px;
   padding-right: 20px;
-  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+  //#gradient > .vertical(@navbarBackgroundGradientTop, @navbarBackgroundGradientBottom);
+  background-color: @white;
   .border-radius(4px);
   @shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
   .box-shadow(@shadow);
@@ -64,6 +65,15 @@
     font-weight: 200;
     line-height: 1;
     color: @white;
+  }
+  
+  .brand-img {
+	  float: left;
+	  display:block;
+	  margin-left: -20px;
+	  padding: -3px;
+	  height: @navbarHeight/3;
+	  padding-top: @navbarBreathing;
   }
   // Plain text in topbar
   .navbar-text {
@@ -189,16 +199,21 @@
 .navbar .nav > li {
   display: block;
   float: left;
+  margin-top: @navbarBreathing;
+  margin-bottom: @navbarBreathing;
+  margin-left: 10px;
 }
 
 // Links
 .navbar .nav > li > a {
   float: none;
-  padding: 10px 10px 11px;
+  padding: 7px 7px 11px;
   line-height: 19px;
+  height: 12px;
   color: @navbarLinkColor;
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  vertical-align: middle;
 }
 // Hover
 .navbar .nav > li > a:hover {
@@ -210,9 +225,11 @@
 // Active nav items
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover {
-  color: @navbarLinkColorHover;
+  color: @navbarLinkColorActive;
   text-decoration: none;
   background-color: @navbarBackground;
+  .border-radius(6px);
+  .box-shadow(0 1px 2px rgba(0,0,0,.15));
 }
 
 // Dividers (basically a vertical hr)

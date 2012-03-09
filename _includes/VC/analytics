@@ -1,0 +1,12 @@
+{% if site.safe and site.VC.analytics.provider and page.VC.analytics != false %}
+
+{% case site.VC.analytics.provider %}
+{% when "google" %}
+  {% include VC/analytics-providers/google %}
+{% when "getclicky" %}
+  {% include VC/analytics-providers/getclicky %}
+{% when "custom" %}
+  {% include custom/analytics %}
+{% endcase %}
+
+{% endif %}

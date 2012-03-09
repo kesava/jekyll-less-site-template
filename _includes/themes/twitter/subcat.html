@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="span2">
+		<ul class="nav nav-pills nav-stacked">
+			{% for menu_item in site.menu_sequence %}
+				{% if menu_item["group"] == page.group %}
+					{% for subcat in menu_item["subcat_menus"] %}
+						{% if subcat.item == page.subcat_menu %}
+							<li class="active"><a href="{{subcat.url}}">{{subcat.item}}</a></li>
+						{% else %}
+							<li><a href="{{subcat.url}}">{{subcat.item}}</a></li>
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="span1">
+	</div>
+	<div class="span9">
+		{{content}}
+	</div>
+</div>

@@ -2,8 +2,6 @@
 // Variables to customize the look and feel of Bootstrap
 // -----------------------------------------------------
 
-
-
 // GLOBAL VALUES
 // --------------------------------------------------
 
@@ -23,6 +21,7 @@
 // Accent colors
 @blue:                  #049cdb;
 @blueDark:              #0064cd;
+@blueLight:				#e8fbfd;
 @green:                 #46a546;
 @red:                   #9d261d;
 @yellow:                #ffc40d;
@@ -65,14 +64,20 @@
 @hrBorder:                @grayLighter;
 
 // Navbar
-@navbarHeight:                    40px;
-@navbarBackground:                @grayDarker;
-@navbarBackgroundHighlight:       @grayDark;
+@navbarHeight:                    120px;
+@navbarBackground:                @grayLighter;
+@navbarBackgroundHighlight:       @grayLight;
 @navbarLinkBackgroundHover:       transparent;
+@navbarBackgroundGradientTop:	  @grayLight;
+@navbarBackgroundGradientBottom:  @white;
 
-@navbarText:                      @grayLight;
-@navbarLinkColor:                 @grayLight;
-@navbarLinkColorHover:            @white;
+@navbarText:                      @grayDark;
+@navbarLinkColor:                 @grayDark;
+@navbarLinkColorHover:            @grayDarker;
+@navbarLinkColorActive:           @black;
+
+
+@navbarBreathing:				  10px;
 
 // Form states and alerts
 @warningText:             #c09853;
@@ -92,7 +97,6 @@
 @infoBorder:              darken(spin(@infoBackground, -10), 7%);
 
 
-
 // GRID
 // --------------------------------------------------
 
@@ -105,3 +109,7 @@
 // Fluid grid
 @fluidGridColumnWidth:    6.382978723%;
 @fluidGridGutterWidth:    2.127659574%;
+
+// Hero-unit Size
+// ---------------------------------------------------
+@heroUnitSize:			  205px;
