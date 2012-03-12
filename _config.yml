@@ -10,16 +10,16 @@ safe: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Vital Connect
-tagline: Smart Vitals
+title : Awesome Company
+tagline: Very Smart Indeed!
 author :
-  name : Vital Connect
-  email : support@vitalconnect.com
+  name : Awesome Company
+  email : support@awesomecompany.com
   github : username
   feedburner : feedname
 
 # Twitter
-twitter_user: vitalconnect
+twitter_user: awesomecompany
 twitter_tweet_count: 4
 twitter_show_replies: true
 twitter_follow_button: true
@@ -34,45 +34,18 @@ menu_sequence:
    menutitle: "Home"
  -
    group: company
-   url: "/company_mgmt.html"
+   url: "/company_overview.html"
    menutitle: "Company"
    subcat_menus:
     -
       item: Overview
       url: '/company_overview.html'
     -
-      item: Management
-      url: '/company_mgmt.html'
-    -
       item: Investors
       url: '/company_investors.html'
     -
       item: News
       url: '/company_news.html'
- -
-   group: industry
-   url: "/industry.html"
-   menutitle: "Industry"
- -
-   group: careers
-   url: "/careers.html"
-   menutitle: "Careers"
-   subcat_menus:
-    -
-      item: Engineering
-      url: '/careers_engineering.html'
-    -
-      item: Operation
-      url: '/careers_operation.html'
-    -
-      item: Marketing
-      url: '/careers_marketing.html'
-    -
-      item: Sales
-      url: '/careers_sales.html'
-    -
-      item: 'Human Resources & Admin'
-      url: '/careers_hr.html'
  -
    group: contact
    url: "/contact.html"
@@ -89,7 +62,7 @@ production_url : http://username.github.com
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
-VC :
+twitter :
   version : 0.2.0
 
   # All links will be namespaced by BASE_PATH if defined.
@@ -127,7 +100,7 @@ VC :
   ASSET_PATH : false
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
-  # Some VC helpers refer to these paths; change theme here if needed.
+  # Some twitter helpers refer to these paths; change theme here if needed.
   #
   # archive_path: /archive.html
   # categories_path : /categories.html
@@ -174,7 +147,7 @@ VC :
   # a hash with key named for the given helper. ex:
   #
   pages_list :
-    provider : "vitalconnect"
+    provider : "awesomecompany"
 	
   #
   # Setting any helper's provider to 'custom' will bypass the helper code

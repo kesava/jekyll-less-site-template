@@ -1,0 +1,12 @@
+{% if site.safe and site.twitter.analytics.provider and page.twitter.analytics != false %}
+
+{% case site.twitter.analytics.provider %}
+{% when "google" %}
+  {% include twitter/analytics-providers/google %}
+{% when "getclicky" %}
+  {% include twitter/analytics-providers/getclicky %}
+{% when "custom" %}
+  {% include custom/analytics %}
+{% endcase %}
+
+{% endif %}

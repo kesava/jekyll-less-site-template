@@ -1,0 +1,8 @@
+{% if site.safe and site.twitter.sharing.provider and page.twitter.sharing != false %}
+
+{% case site.twitter.sharing.provider %}
+{% when "custom" %}
+  {% include custom/sharing %}
+{% endcase %}
+
+{% endif %}

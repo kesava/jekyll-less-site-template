@@ -14,7 +14,7 @@ CONFIG = {
 server_port     = "4000"      # port for preview server eg. localhost:4000
 
 # Path configuration helper
-module VC
+module Twitter
   class Path
     SOURCE = "."
     Paths = {
@@ -38,7 +38,7 @@ module VC
     end
   
   end #Path
-end #VC
+end #twitter
 
 
 task :default => :less
@@ -132,7 +132,7 @@ task :post do
     post.puts "category: "
     post.puts "tags: []"
     post.puts "---"
-    post.puts "{% include VC/setup %}"
+    post.puts "{% include twitter/setup %}"
   end
 end # task :post
 
@@ -156,7 +156,7 @@ task :page do
     post.puts "layout: page"
     post.puts "title: \"#{title}\""
     post.puts "---"
-    post.puts "{% include VC/setup %}"
+    post.puts "{% include twitter/setup %}"
   end
 end # task :page
 

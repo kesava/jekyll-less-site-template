@@ -1,0 +1,22 @@
+{% capture jbcache %}
+  <!--
+  - Dynamically set liquid variables for working with URLs/paths
+  -->
+  {% if site.twitter.setup.provider == "custom" %}
+    {% include custom/setup %}
+  {% else %}
+    {% if site.safe and site.twitter.BASE_PATH and site.twitter.BASE_PATH != '' %}
+      {% assign BASE_PATH = site.twitter.BASE_PATH %}
+      {% assign HOME_PATH = site.twitter.BASE_PATH %}
+    {% else %}
+      {% assign BASE_PATH = nil %}
+      {% assign HOME_PATH = "/" %}
+    {% endif %}
+
+    {% if site.twitter.ASSET_PATH %}
+      {% assign ASSET_PATH = site.twitter.ASSET_PATH %}
+    {% else %}
+      {% capture ASSET_PATH %}{{ BASE_PATH }}/assets{% endcapture %}
+    {% endif %}  
+  {% endif %}
+{% endcapture %}{% assign jbcache = nil %}
